@@ -1,0 +1,120 @@
+  /* Reset & base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+    background-color: #fff7fb; /* very light pinkish pastel */
+    box-shadow: 0 3px 8px rgba(255, 192, 203, 0.25); /* soft pink shadow */
+    font-family: 'Poppins', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0.75rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    font-weight: 800;
+    font-size: 1.7rem;
+    color: #db2777; /* vibrant pink */
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    user-select: none;
+  }
+
+  /* Nav Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.2rem;
+  }
+  .nav-links li a {
+    color: #6b7280; /* medium gray */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  .nav-links li a:hover,
+  .nav-links li a:focus {
+    color: #db2777; /* pink on hover */
+    border-bottom: 2px solid #db2777;
+    outline: none;
+  }
+
+  /* Special style for Login/Signup */
+  .login-signup {
+    font-weight: 700;
+  }
+
+  /* Toggle Button - Hamburger */
+  .toggle-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+  }
+  .toggle-btn:focus {
+    outline: 2px solid #db2777;
+    outline-offset: 3px;
+  }
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #db2777; /* pink bars */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 60px;
+      right: -100%;
+      background-color: #fff7fb;
+      height: calc(100% - 60px);
+      width: 220px;
+      flex-direction: column;
+      padding-top: 2.5rem;
+      gap: 1.6rem;
+      box-shadow: -4px 0 15px rgba(219, 39, 119, 0.2);
+      transition: right 0.3s ease;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-left: 3px solid #db2777;
+      z-index: 999;
+    }
+    .nav-links.active {
+      right: 0;
+    }
+    .toggle-btn {
+      display: flex;
+    }
+  }
+
+  /* Animate hamburger when active */
+  .toggle-btn.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .toggle-btn.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .toggle-btn.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }

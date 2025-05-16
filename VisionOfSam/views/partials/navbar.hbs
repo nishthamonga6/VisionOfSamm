@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navbar Demo</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+
+  <!-- Bootstrap Icons CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      font-family: 'Ysabeau SC', serif;
+    }
+    nav.navbar {
+      background-color: #ffffff;
+    }
+
+    /* Brand styling - black and no hover effect */
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #000000;
+      transition: none;
+      text-decoration: none;
+    }
+
+    /* Nav links */
+    .navbar-nav .nav-link {
+      color: #333;
+      font-weight: 500;
+      transition: color 0.25s ease, text-decoration 0.25s ease;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+      color: #0d6efd;
+      text-decoration: underline;
+    }
+
+    /* Buttons base style: pale white background */
+    .btn-login,
+    .btn-register {
+      background-color: #f8f9fa; /* pale white */
+      color: #333333;
+      border-radius: 6px;
+      padding: 8px 16px;
+      margin: 0 6px;
+      font-weight: 600;
+      box-shadow: none;
+      border: 1.5px solid transparent;
+      transition: 
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-bottom 0.3s ease,
+        box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .btn-login i,
+    .btn-register i {
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover: change bg, text color and add underline (border-bottom) */
+    .btn-login:hover,
+    .btn-login:focus {
+      background-color: #0d6efd;
+      color: #fff;
+      border-bottom: 3px solid #003d99; /* darker blue underline */
+      box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+      transform: scale(1.05);
+      text-decoration: none;
+      outline: none;
+    }
+    .btn-register:hover,
+    .btn-register:focus {
+      background-color: #6c757d;
+      color: #fff;
+      border-bottom: 3px solid #494f54; /* darker grey underline */
+      box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+      transform: scale(1.05);
+      text-decoration: none;
+      outline: none;
+    }
+
+    /* Remove focus outline for cleaner look */
+    .btn-login:focus-visible,
+    .btn-register:focus-visible {
+      outline: 2px solid #0d6efd;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <nav
+    class="navbar navbar-expand-xxl navbar-light shadow-sm"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="#">Vision Of Sam</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto" style="font-weight: 500;">
+          <li class="nav-item">
+            <a class="nav-link" href="whatdowedo.html">What We Do</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Who We Serve</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Who We Are</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Learning Resources</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <a href="login.html" class="btn btn-login"
+            ><i class="fa-solid fa-user"></i> Login
+          </a>
+          <a href="#" class="btn btn-register"
+            ><i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <a href="contactus.html" class="btn btn-register"
+            ><i class="fa-solid fa-phone"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

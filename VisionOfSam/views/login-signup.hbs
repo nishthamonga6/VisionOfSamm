@@ -1,0 +1,58 @@
+<h2>{{title}}</h2>
+
+{{#if error}}
+  <p style="color:red;">{{error}}</p>
+{{/if}}
+
+<div style="max-width: 400px; margin: auto;">
+
+  <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+    <button id="showLoginBtn" type="button">Login</button>
+    <button id="showSignupBtn" type="button">Sign Up</button>
+  </div>
+
+  <form id="loginForm" action="/auth" method="POST" style="display: block;">
+    <h3>Login</h3>
+
+    <label for="loginEmail">Email:</label><br>
+    <input id="loginEmail" type="email" name="email" required /><br><br>
+
+    <label for="loginPassword">Password:</label><br>
+    <input id="loginPassword" type="password" name="password" required /><br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <form id="signupForm" action="/auth/signup" method="POST" style="display: none;">
+    <h3>Sign Up</h3>
+
+    <label for="signupName">Name:</label><br>
+    <input id="signupName" type="text" name="name" required /><br><br>
+
+    <label for="signupEmail">Email:</label><br>
+    <input id="signupEmail" type="email" name="email" required /><br><br>
+
+    <label for="signupPassword">Password:</label><br>
+    <input id="signupPassword" type="password" name="password" required /><br><br>
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+</div>
+
+<script>
+  const loginForm = document.getElementById('loginForm');
+  const signupForm = document.getElementById('signupForm');
+  const showLoginBtn = document.getElementById('showLoginBtn');
+  const showSignupBtn = document.getElementById('showSignupBtn');
+
+  showLoginBtn.addEventListener('click', () => {
+    loginForm.style.display = 'block';
+    signupForm.style.display = 'none';
+  });
+
+  showSignupBtn.addEventListener('click', () => {
+    signupForm.style.display = 'block';
+    loginForm.style.display = 'none';
+  });
+</script>
